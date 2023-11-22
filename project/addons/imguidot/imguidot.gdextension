@@ -1,0 +1,16 @@
+[configuration]
+
+entry_symbol = "imguidot_init"
+
+[libraries]
+
+macos.debug = "bin/imguidot.macos.debug.framework"
+macos.release = "bin/imguidot.macos.release.framework"
+windows.debug.x86_64 = "bin/imguidot.windows.debug.x86_64.dll"
+windows.release.x86_64 = "bin/imguidot.windows.release.x86_64.dll"
+linux.debug.x86_64 = "bin/imguidot.linux.debug.x86_64.so"
+linux.release.x86_64 = "bin/imguidot.linux.release.x86_64.so"
+linux.debug.arm64 = "bin/imguidot.linux.debug.arm64.so"
+linux.release.arm64 = "bin/imguidot.linux.release.arm64.so"
+linux.debug.rv64 = "bin/imguidot.linux.debug.rv64.so"
+linux.release.rv64 = "bin/imguidot.linux.release.rv64.so"
