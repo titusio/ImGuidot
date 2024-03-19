@@ -10,9 +10,13 @@ namespace godot
 	{
 		GDCLASS(ImGuiDot, Control);
 
+		static ImGuiDot *singleton;
+
 	public:
 		ImGuiDot();
 		~ImGuiDot();
+
+		static ImGuiDot *get_singleton();
 
 	protected:
 		static void _bind_methods();

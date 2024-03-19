@@ -10,13 +10,17 @@
 
 using namespace godot;
 
+static ImGuiDot *imguidot = nullptr;
 
 void imguidot_initialize(ModuleInitializationLevel p_level)
 {
 	if (p_level == MODULE_INITIALIZATION_LEVEL_SCENE)
 	{
-		// ClassDB::register_class<ImGuiDot>();
-		// Engine::get_singleton()->register_singleton("ImGuiDot", new ImGuiDot());
+		ClassDB::register_class<ImGuiDot>();
+
+		// create instance
+		imguidot = memnew(ImGuiDot);
+		Engine::get_singleton()->register_singleton("ImGuiDot", imguidot);
 	}
 }
 
@@ -24,8 +28,8 @@ void imguidot_terminate(ModuleInitializationLevel p_level)
 {
 	if (p_level == MODULE_INITIALIZATION_LEVEL_SCENE)
 	{
-		// Engine::get_singleton()->unregister_singleton("ImGuiDot"); 
-
+		Engine::get_singleton()->unregister_singleton("ImGuiDot"); 
+		memdelete(imguidot);
 	}
 }
 
