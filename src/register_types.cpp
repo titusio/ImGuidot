@@ -6,6 +6,8 @@
 #include <godot_cpp/classes/engine.hpp>
 #include <godot_cpp/godot.hpp>
 
+#include "imguidot.hpp"
+
 using namespace godot;
 
 
@@ -13,6 +15,8 @@ void imguidot_initialize(ModuleInitializationLevel p_level)
 {
 	if (p_level == MODULE_INITIALIZATION_LEVEL_SCENE)
 	{
+		// ClassDB::register_class<ImGuiDot>();
+		// Engine::get_singleton()->register_singleton("ImGuiDot", new ImGuiDot());
 	}
 }
 
@@ -20,6 +24,8 @@ void imguidot_terminate(ModuleInitializationLevel p_level)
 {
 	if (p_level == MODULE_INITIALIZATION_LEVEL_SCENE)
 	{
+		// Engine::get_singleton()->unregister_singleton("ImGuiDot"); 
+
 	}
 }
 
@@ -33,6 +39,6 @@ extern "C"
 		init_obj.register_terminator(imguidot_terminate);
 		init_obj.set_minimum_library_initialization_level(MODULE_INITIALIZATION_LEVEL_SCENE);
 
-		return init_obj.init();
+		return init_obj.init();	
 	}
 }
