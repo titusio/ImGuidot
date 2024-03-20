@@ -2,9 +2,10 @@
 #define IMGUIDOT_HPP
 
 #include <godot_cpp/classes/control.hpp>
+
 #include <imgui.h>
 
-namespace godot 
+namespace godot
 {
 	class ImGuiDot : public Control
 	{
@@ -18,10 +19,11 @@ namespace godot
 
 		static ImGuiDot *get_singleton();
 
+		void HelloThere();
+
 	protected:
 		static void _bind_methods();
 	};
 }
 
 #endif // IMGUIDOT_HPP
-

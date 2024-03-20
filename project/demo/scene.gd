@@ -2,3 +2,4 @@ extends Node
 
 func _ready() -> void:
 	print("Hello GDScript!")
+	ImGuiDot.HelloThere()
